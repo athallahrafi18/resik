@@ -1,0 +1,14 @@
+# serviceAccountKey
+serviceAccountKey
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Env
+.env
+
+# VS Code
+.vscode/
