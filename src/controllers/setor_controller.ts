@@ -10,16 +10,21 @@ const generateOrderId = (index: number): string => {
 
 // POST /api/setoran
 export const submitSetoran = async (req: Request, res: Response): Promise<void> => {
-  const { nama, user_id, alamat, tanggal, catatan, total_harga, sampah } = req.body;
+  const { nama, alamat, tanggal, catatan, total_harga, sampah } = req.body;
 
-  // Validasi input
+  const user_id = (req as any).user?.uid;
+
+  if (!user_id) {
+    res.status(401).json({ message: "User belum login. Token tidak valid." });
+    return;
+  }
+
   if (!nama || !alamat || !tanggal || !Array.isArray(sampah) || sampah.length === 0) {
     res.status(400).json({ message: "Data tidak lengkap atau tidak valid." });
     return;
   }
 
   try {
-    // Ambil setoran terakhir berdasarkan createdAt
     const snapshot = await db
       .collection("setoran")
       .orderBy("createdAt", "desc")
@@ -42,7 +47,7 @@ export const submitSetoran = async (req: Request, res: Response): Promise<void> 
       nama,
       user_id,
       alamat,
-      tanggal: new Date(tanggal), // ← penting agar bisa digunakan orderBy di Firestore
+      tanggal: new Date(tanggal),
       catatan,
       total_harga,
       sampah,
@@ -111,7 +116,6 @@ export const getSetoranById = async (req: Request, res: Response): Promise<void>
 
     const data = doc.data();
 
-    // Ambil email dan telepon berdasarkan user_id
     let email = "";
     let phone = "";
 
