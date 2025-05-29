@@ -16,7 +16,7 @@ export const lookupBarcode = (req: Request, res: Response) => {
     // === Load Excel Files ===
     const barcodePath = path.join(__dirname, '../../data/Barcode_data_terklasifikasi_prediksi.xlsx');
     const beratPath = path.join(__dirname, '../../data/Berat_sampah.xlsx');
-    const hargaPath = path.join(__dirname, '../../data/Harga_sampah.xlsx');
+    const hargaPath = path.join(__dirname, '../../data/Harga_Sampah.xlsx');
 
     const barcodeWB = xlsx.readFile(barcodePath);
     const beratWB = xlsx.readFile(beratPath);
