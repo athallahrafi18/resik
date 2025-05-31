@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api", barcodeRoutes);
-app.use("/api", setorRoutes);
+app.use("/api/setoran", setorRoutes);
 app.use("/api", dashboardRoutes);
 
 app.get("/", (req, res) => {

@@ -151,3 +151,37 @@ export const getSetoranById = async (req: Request, res: Response): Promise<void>
     res.status(500).json({ message: "Terjadi kesalahan saat mengambil detail.", error });
   }
 };
+
+// PATCH hanya update status
+export const updateSetoranStatus = async (req: Request, res: Response): Promise<void> => {
+  const { id } = req.params;
+  const { status } = req.body;
+  if (!status) {
+    res.status(400).json({ message: "Status wajib diisi." });
+    return;
+  }
+  try {
+    await db.collection('setoran').doc(id).update({ status });
+    res.status(200).json({ message: "Status berhasil diubah." });
+  } catch (error) {
+    res.status(500).json({ message: "Gagal update status.", error });
+  }
+};
+
+// PUT update semua data setoran, termasuk array sampah
+export const updateSetoran = async (req: Request, res: Response): Promise<void> => {
+  const { id } = req.params;
+  const { status, sampah, total_harga, catatan } = req.body;
+  try {
+    const updateData: any = {};
+    if (status) updateData.status = status;
+    if (sampah) updateData.sampah = sampah;
+    if (total_harga !== undefined) updateData.total_harga = total_harga;
+    if (catatan !== undefined) updateData.catatan = catatan;
+
+    await db.collection('setoran').doc(id).update(updateData);
+    res.status(200).json({ message: "Setoran berhasil diupdate." });
+  } catch (error) {
+    res.status(500).json({ message: "Gagal update data.", error });
+  }
+};
