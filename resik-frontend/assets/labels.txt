@@ -1,0 +1,9 @@
+Aluminum
+Botol-PET
+Botol-kaca
+Botol-plastik
+Galon
+Kardus
+Organik
+Plastik-kemasan
+Tutup-botol

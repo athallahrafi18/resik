@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "881326400280",
+    "project_id": "resik-49c66",
+    "storage_bucket": "resik-49c66.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:881326400280:android:cb0d1c0455fc6791a0346d",
+        "android_client_info": {
+          "package_name": "com.example.resik"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-WdO2mwufAkwzlQTjuvPVuUec9r9FgrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

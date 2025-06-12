@@ -1,0 +1,2 @@
+D:/WORK/resik/resik-frontend/android/app/.cxx/RelWithDebInfo/70345d6n/x86/CMakeFiles/edit_cache.dir
+D:/WORK/resik/resik-frontend/android/app/.cxx/RelWithDebInfo/70345d6n/x86/CMakeFiles/rebuild_cache.dir

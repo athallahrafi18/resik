@@ -1,0 +1,2 @@
+D:/WORK/resik/resik-frontend/android/app/.cxx/Debug/2g5jl2e5/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/WORK/resik/resik-frontend/android/app/.cxx/Debug/2g5jl2e5/armeabi-v7a/CMakeFiles/rebuild_cache.dir

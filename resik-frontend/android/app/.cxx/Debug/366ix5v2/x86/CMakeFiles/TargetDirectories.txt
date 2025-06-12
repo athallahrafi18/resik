@@ -1,0 +1,2 @@
+D:/WORK/resik/android/app/.cxx/Debug/366ix5v2/x86/CMakeFiles/edit_cache.dir
+D:/WORK/resik/android/app/.cxx/Debug/366ix5v2/x86/CMakeFiles/rebuild_cache.dir
