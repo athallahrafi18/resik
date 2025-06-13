@@ -40,7 +40,7 @@ npm install
 ### Run project secara lokal
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 ---
